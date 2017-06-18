@@ -20,18 +20,18 @@
 	</modules>
 	
 	<!-- 镜像 -->
-	<repositories>
-		<repository>
-			<id>hutong</id>
-			<url>http://172.16.1.52:8081/nexus/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+	<!--<repositories>-->
+		<!--<repository>-->
+			<!--<id>hutong</id>-->
+			<!--<url>http://172.16.1.52:8081/nexus/content/groups/public/</url>-->
+			<!--<releases>-->
+				<!--<enabled>true</enabled>-->
+			<!--</releases>-->
+			<!--<snapshots>-->
+				<!--<enabled>true</enabled>-->
+			<!--</snapshots>-->
+		<!--</repository>-->
+	<!--</repositories>-->
 	
 	<!-- 编码 -->
 	<properties>
@@ -84,23 +84,23 @@
         </extensions>
 	</build>
 	
-    <pluginRepositories>
-        <pluginRepository>
-            <id>cdc-plugin-respository</id>
-            <name>cdc-plugin-respository</name>
-            <url>http://172.16.1.52:8081/nexus/content/repositories/releases</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <!--<pluginRepositories>-->
+        <!--<pluginRepository>-->
+            <!--<id>cdc-plugin-respository</id>-->
+            <!--<name>cdc-plugin-respository</name>-->
+            <!--<url>http://172.16.1.52:8081/nexus/content/repositories/releases</url>-->
+        <!--</pluginRepository>-->
+    <!--</pluginRepositories>-->
 
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <url>http://172.16.1.52:8081/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <url>http://172.16.1.52:8081/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>nexus-releases</id>-->
+            <!--<url>http://172.16.1.52:8081/nexus/content/repositories/releases</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+            <!--<id>nexus-snapshots</id>-->
+            <!--<url>http://172.16.1.52:8081/nexus/content/repositories/snapshots</url>-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
 	
 </project>
