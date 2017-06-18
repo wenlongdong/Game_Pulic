@@ -12,5 +12,4 @@ public interface ISceneHttpIntercept {
 
 	//异常捕获函数
 	public void catchExecuteException(HttpRequestMessage request);
-	
 }
