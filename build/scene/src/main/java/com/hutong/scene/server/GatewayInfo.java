@@ -4,8 +4,6 @@
 package com.hutong.scene.server;
 
 
-import java.util.concurrent.ConcurrentLinkedDeque;
-
 /**
  * @author DWL
  * 记录一些gateway的信息
@@ -13,7 +11,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 public class GatewayInfo {
 
 	private String gatewayId = "";
-ConcurrentLinkedDeque
+
 	public GatewayInfo(String gatewayId) {
 		this.gatewayId = gatewayId;
 	}
