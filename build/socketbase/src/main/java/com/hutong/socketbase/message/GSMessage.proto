@@ -1,0 +1,71 @@
+package GSMessage;
+
+option java_package = "com.hutong.socketbase.message";
+option java_outer_classname = "GSMessage";
+
+message SceneUniqeId {
+	required int32 sceneType = 1; // scene类型
+	required string sceneId = 2; // scene标识
+}
+
+message GSRegist {
+	required string gatewayId = 1; // gateway标识
+}
+
+message SGRegist {
+	required int32 result = 1; // 结果
+	repeated SceneUniqeId sceneUniqeId = 2; // scene的唯一标识
+}
+
+message GSPlayerDisconnect {
+	required int64 playerId = 1; 
+	required int32 serverId = 2;
+	required string gatewayId = 3;
+}
+
+message SGPlayerDisconnect {
+	required int32 result = 1; // 结果
+	required int64 playerId = 2; 
+	required int32 serverId = 3;
+	required SceneUniqeId sceneUniqeId = 4; // scene的唯一标识
+}
+
+message GatewayDisconnect {
+	required string gatewayId = 1;//断掉的gatewayId
+}
+
+//scene发送消息主动断开gateway方玩家的连接
+message SGDisconnectPlayer{
+	required int64 playerId = 1;
+	required int32 serverId = 2;
+}
+
+//场景之间的互相发送的消息
+message SGSceneToSceneMsg{
+	required int64 toPlayerId = 1;//接收方的玩家Id
+	required int32 toServerId = 2;//接收方玩家的serverId
+	required int32 opCode = 3;//游戏方定义的操作码
+	required bytes msgBytes = 4;//游戏方传送的字节数据
+}
+ 
+
+//内部的gate 和 scene 之间的心跳消息
+message GSPing {
+	required int32 pingNum = 1;
+	required string gatewayId = 2;
+}
+
+message SGPong {
+	required int32 pongNum = 1;
+	required SceneUniqeId sceneUniqeId = 2; // scene的唯一标识
+}
+
+message SGPing{
+	required int32 pingNum = 1;
+	required SceneUniqeId sceneUniqeId = 2; // scene的唯一标识
+}
+
+message GSPong{
+	required int32 pongNum = 1;
+	required string gatewayId = 2;
+}

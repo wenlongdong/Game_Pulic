@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.hutong</groupId>
+		<artifactId>build</artifactId>
+		<version>1.3.3-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>gateway</artifactId>
+	
+	<name>gateway</name>
+	<description>网关</description>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.hutong</groupId>
+			<artifactId>socketbase</artifactId>
+			<version>${public-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hutong</groupId>
+			<artifactId>framework</artifactId>
+			<version>${public-version}</version>
+		</dependency>
+	</dependencies>
+	
+</project>

@@ -1,0 +1,1 @@
+.\protoc.exe -I=./ --java_out=../../../../ GSMessage.proto
